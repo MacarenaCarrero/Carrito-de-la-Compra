@@ -47,13 +47,13 @@ body {
   --white:#FFFFFF;
 }
 .cards{
-  display: flex;
-  flex-direction: column;
+  display: grid;
  
 }
 @media screen and (width >= 768px){
   .cards{
-flex-wrap:wrap-reverse;
+    grid-template-columns: repeat(3, auto );
+    gap: 24px;
   }
 }
 .filters{
@@ -64,11 +64,21 @@ flex-wrap:wrap-reverse;
   display: flex;
   flex-direction: column;
   height: 319px;
-  position: relative;
   margin-bottom: 24px;
 }
 .image{
   margin-bottom: 38px;
+
+ 
+}
+@media screen and (width >=768px){
+  .image{
+  
+  }
+
+}
+.picture{
+  position: relative;
 }
 .button-add{
   position: absolute;
@@ -79,12 +89,17 @@ flex-wrap:wrap-reverse;
   width: 160px;
   left: 80px;
   border-radius: 90px;
-  bottom: 85px;
+  bottom: -20px;
   background-color: var(--white);
   color: var(--rose-900);
   border:solid 2px var(--rose-400);
   font-weight: var(--weigth-semibold);
   gap: 8px;
+}
+@media screen and (width >= 768px){
+  .button-add{
+    left: 30px;
+  }
 }
 .filter-button{
   display: flex;
