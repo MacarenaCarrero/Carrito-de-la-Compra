@@ -22,66 +22,71 @@ body {
   margin: 0;
   font-family: "Red Hat Text", sans-serif;
   margin-inline: 24px;
-  font-weight:var(--weigth-semibold);
+  font-weight: var(--weigth-semibold);
   background-color: var(--rose-50);
 }
-@media screen and (width >= 1024px){
-  .body{
+@media screen and (width >= 1024px) {
+  .body {
     margin-inline: 112px;
   }
 }
 
-:root{
-  --h2-size:40px;
-  --h3-size:24px;
-  --h4-size:16px;
-  --h5-size:14px;
+:root {
+  --h2-size: 40px;
+  --h3-size: 24px;
+  --h4-size: 16px;
+  --h5-size: 14px;
 
-  --line-heigt:120%;
+  --line-heigt: 120%;
 
-  --weigth-regular:400;
-  --weigth-bold:700;
-  --weigth-semibold:600;
+  --weigth-regular: 400;
+  --weigth-bold: 700;
+  --weigth-semibold: 600;
 
-  --rose-900:#260F08;
-  --rose-500:#87635A;
-  --rose-400:#AD8A85;
-  --rose-100:#F5EEEC;
-  --rose-50:#FCF8F6;
-  --red:#C73B0F;
-  --white:#FFFFFF;
+  --rose-900: #260f08;
+  --rose-500: #87635a;
+  --rose-400: #ad8a85;
+  --rose-100: #f5eeec;
+  --rose-50: #fcf8f6;
+  --red: #c73b0f;
+  --white: #ffffff;
 }
-.cards{
+.cards {
   display: grid;
- 
 }
-@media screen and (width >= 768px){
-  .cards{
-    grid-template-columns: repeat(3, 213px );
+@media screen and (width >= 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 213px);
     gap: 24px;
   }
 }
-@media screen and (width >= 1024px){
-  .cards{
-    grid-template-columns: repeat(3, 250px );
-    
+@media screen and (width >= 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 250px);
   }
 }
-.filters{
+.filters {
   display: flex;
   margin-bottom: 26px;
 }
-.card{
+.card {
   display: flex;
   flex-direction: column;
   height: 319px;
   margin-bottom: 24px;
-} 
-.picture{
+}
+.image {
+  border-radius: 10px;
+}
+.picture {
   position: relative;
   margin-bottom: 38px;
 }
-.button-add{
+.picture-select {
+  border-radius: 10px;
+  border: solid var(--red) 2px;
+}
+.button-add {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -93,21 +98,36 @@ body {
   bottom: -20px;
   background-color: var(--white);
   color: var(--rose-900);
-  border:solid 2px var(--rose-400);
+  border: solid 2px var(--rose-400);
   font-weight: var(--weigth-semibold);
   gap: 8px;
 }
-@media screen and (width >= 768px){
-  .button-add{
+@media screen and (width >= 768px) {
+  .button-add {
     left: 30px;
   }
 }
-@media screen and (width >= 1024px){
-  .button-add{
+@media screen and (width >= 1024px) {
+  .button-add {
     left: 50px;
   }
 }
-.filter-button{
+.button-hover {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 44px;
+  width: 160px;
+  background-color: var(--red);
+  border: none;
+  border-radius: 90px;
+  color: var(--white);
+  left: 80px;
+  bottom: -20px;
+}
+
+.filter-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,55 +136,59 @@ body {
   padding: 12px;
   background-color: var(--white);
   color: var(--rose-900);
-  border:solid 2px var(--rose-400);
+  border: solid 2px var(--rose-400);
   border-radius: 50px;
   margin-right: 18px;
   font-weight: var(--weigth-semibold);
 }
 
-.category{
+.category {
   color: var(--rose-500);
   font-size: var(--h5-size);
   font-weight: var(--weigth-regular);
   margin-bottom: 4px;
 }
-.product{
+.product {
   font-weight: var(--weigth-semibold);
   color: var(--rose-900);
-  margin-bottom: 4px; 
+  margin-bottom: 4px;
 }
-.price{
+.price {
   color: var(--red);
   font-weight: var(--weigth-semibold);
 }
-.cart-empty{
-  display:flex;
+.cart-empty {
+  display: flex;
   flex-direction: column;
   align-items: center;
   height: 299px;
   background-color: var(--white);
   padding: 24px;
 }
-@media screen and (width >=1024px){
-  .cart-empty{
+@media screen and (width >=1024px) {
+  .cart-empty {
     width: 384px;
   }
 }
-.title-cart{   
+.title-cart {
   font-size: var(--h3-size);
   color: var(--red);
   font-weight: var(--weigth-bold);
   margin-bottom: 24px;
 }
-.text-cart-empty{
+.text-cart-empty {
   font-weight: var(--weigth-semibold);
   color: var(--rose-500);
   font-size: var(--h5-size);
   border-radius: 12px;
 }
-@media screen and (width >=1024px){
-  .main-container{
+@media screen and (width >=1024px) {
+  .main-container {
     display: flex;
     gap: 32px;
   }
+}
+
+.hide {
+  display: none;
 }
