@@ -102,6 +102,11 @@ body {
     left: 30px;
   }
 }
+@media screen and (width >= 1024px){
+  .button-add{
+    left: 50px;
+  }
+}
 .filter-button{
   display: flex;
   justify-content: center;
