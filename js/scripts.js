@@ -1,4 +1,5 @@
 const cardsElement = document.getElementById("cards");
+const cartElement = document.getElementById("cart");
 const productsCart = [];
 
 const quantityProductIncrease = (name, addButton) => {
@@ -17,6 +18,7 @@ const quantityProductDecrease = (name, imgButton) => {
   imgButton.nextElementSibling.textContent = productUnSelected.quantity;
   if (productUnSelected.quantity <= 0) {
     imgButton.parentElement.nextElementSibling.classList.remove("hide");
+    removeProducts(productUnSelected.name);
   }
 };
 
@@ -46,6 +48,10 @@ const productInfo = (event) => {
   } else if (type === "decrease") {
     quantityProductDecrease(name, event.target);
   }
+};
+
+const removeProducts = (name) => {
+  productsCart = productsCart.filter((product) => product.name !== name);
 };
 
 cardsElement.addEventListener("click", productInfo);
