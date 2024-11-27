@@ -75,9 +75,6 @@ body {
   height: 319px;
   margin-bottom: 24px;
 }
-.image {
-  border-radius: 10px;
-}
 .picture {
   position: relative;
   margin-bottom: 38px;
@@ -156,6 +153,16 @@ body {
   font-weight: var(--weigth-semibold);
   color: var(--rose-900);
   margin-bottom: 4px;
+}
+.pointer {
+  pointer-events: none;
+}
+.icon {
+  padding: 3px;
+  width: 20px;
+  height: 20px;
+  border: solid var(--white) 1px;
+  border-radius: 10px;
 }
 .price {
   color: var(--red);

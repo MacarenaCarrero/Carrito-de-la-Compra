@@ -8,13 +8,16 @@ const quantityProductIncrease = (name, addButton) => {
   addButton.previousElementSibling.textContent = productSelected.quantity;
 };
 
-const quantityProductDecrease = (name, lessButton) => {
+const quantityProductDecrease = (name, imgButton) => {
   const productUnSelected = productsCart.find(
     (product) => product.name === name
   );
 
   productUnSelected.quantity--;
-  lessButton.nextElementSibling.textContent = productUnSelected.quantity;
+  imgButton.nextElementSibling.textContent = productUnSelected.quantity;
+  if (productUnSelected.quantity <= 0) {
+    imgButton.parentElement.nextElementSibling.classList.remove("hide");
+  }
 };
 
 const addToCart = (productName, productPrice) => {
@@ -34,6 +37,7 @@ const productInfo = (event) => {
   const name = event.target.dataset.name;
   const price = event.target.dataset.price;
   const type = event.target.dataset.type;
+  console.log(event.target);
   if (type === "add") {
     showQuantityButton(event.target);
     addToCart(name, price);
