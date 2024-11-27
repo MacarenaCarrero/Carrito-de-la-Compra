@@ -126,7 +126,11 @@ body {
   left: 80px;
   bottom: -20px;
 }
-
+@media screen and (width >= 1024px) {
+  .button-hover {
+    left: 50px;
+  }
+}
 .filter-button {
   display: flex;
   justify-content: center;

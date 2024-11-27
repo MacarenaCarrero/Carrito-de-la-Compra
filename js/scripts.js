@@ -30,6 +30,8 @@ const productInfo = (event) => {
     addToCart(name, price);
   } else if (type === "increase") {
     quantityProductIncrease(name, event.target);
+  } else if (type === "decrease") {
+    quantityProductDecrease(name, event.target);
   }
 };
 
