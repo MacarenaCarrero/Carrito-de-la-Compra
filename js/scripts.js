@@ -8,6 +8,15 @@ const quantityProductIncrease = (name, addButton) => {
   addButton.previousElementSibling.textContent = productSelected.quantity;
 };
 
+const quantityProductDecrease = (name, lessButton) => {
+  const productUnSelected = productsCart.find(
+    (product) => product.name === name
+  );
+
+  productUnSelected.quantity--;
+  lessButton.nextElementSibling.textContent = productUnSelected.quantity;
+};
+
 const addToCart = (productName, productPrice) => {
   productsCart.push({
     name: productName,
